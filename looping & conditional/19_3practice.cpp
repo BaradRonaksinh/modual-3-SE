@@ -1,18 +1,42 @@
-/**/
+/*Patterns_3
+
+ *
+ * *
+ * * *
+ * * * *
+ * * * * *
+ * * * *
+ * * *
+ * *
+ *
+
+*/
 
 #include<stdio.h>
 
 int main(){
-	int i, j, a=65, c;
-	printf("Enter Line no:");
-	scanf("%d", &c);
+	int i, j, k, n;
 	
-	for(i=1;i<=c;i++){
-		for(j=1;j<=i;j++,a++){
-			printf(" %c",a);
+	printf("Enter the number:");
+	scanf("%d", &n);
+	
+	for(i=1;i<=n;i++){
+		for(j=1;j<=i;j++){
+		printf(" *");
+		}
+		
+		printf("\n");
+	}
+	
+	for(i=n-1;i>=1;i--){
+		for(j=i;j>=1;j--){
+			printf(" *");
 		}
 		printf("\n");
 	}
+		
+		
 }
+	
 
 

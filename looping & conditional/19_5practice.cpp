@@ -1,4 +1,13 @@
-/*19. Pattern_ 5.*/
+/*19. Pattern_ 5.
+
+A
+A B
+A B C
+A B C D
+A B C D E
+A B C D E F
+
+*/
 
 #include<stdio.h>
 int main(){
@@ -6,13 +15,11 @@ int main(){
 	scanf("%d", &n);
 	
 	for(i =1;i<=n;i++){
-		for(j=1;j<=i;j++){
-			printf("%c",a);
-			a++;
+		for(j=1;j<=i;j++,a++){
+			printf(" %c",a);	
 		}
-		
+		a=65;
 		printf("\n");
-	}//baki he.........
-	
+	}
 	
 }

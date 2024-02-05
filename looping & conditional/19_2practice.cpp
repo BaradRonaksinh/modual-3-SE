@@ -1,4 +1,11 @@
-/*19. Patterns _ 3*/
+/*19. Patterns _ 2
+
+         *
+       * * *
+     * * * * *
+   * * * * * * *
+
+*/
 
 #include<stdio.h>
 int main(){
@@ -6,15 +13,17 @@ int main(){
 	printf("Enter No:\n");
 	scanf("%d", &n);
 	
-	for(i =5; i>= n;i--){
-		for(j=1;j<=i;j++){
+	for(i=1;i<=n;i++){
+		if(i % 2 != 0){
+			for(j=i;j<=n;j++){
 			printf(" ");
 		}
 		
-		for(k = i-k;k>=j;k++){
-			printf("*");
+		for(k=1;k<=i;k++){
+			printf(" *");
+		}
+		printf("\n");	
 		}
 		
-		printf("\n");
 	}
 }
