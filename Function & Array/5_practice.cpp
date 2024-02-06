@@ -3,8 +3,8 @@ descending order as per user’s choice.*/
 
 #include<stdio.h>
 int main(){
-	int i, j,num, myA1[5], myA2[5], choice;
-	//enter Arrays element..
+	int i, j,num,temp=0, myA1[5], myA2[5], choice;
+	//enter Arrays  A & B element..
 	printf("Enter element of Array A:\n");
 	for(i=0;i<5;i++){
 		scanf("%d", &myA1[i]);
@@ -15,32 +15,57 @@ int main(){
 		scanf("%d", &myA2[i]);
 	}
 	//print arrays...
-	printf("Array A is:");
-	for(i=0;i<5;i++){
-		num = myA1[0];
-		if(myA1[0] < myA1[i+1]){
-			num = myA1[i];
-			myA1[i] = num;
-		}
-		printf(" %d", myA1[i]);	
-	}
-	printf("\nArray B is:");
-	for(i=0;i<5;i++){
-		for(j=i;j<5;j++){
-			num = myA2[0];
-			if(myA1[j] < myA1[i]){
-			num = myA1[i];
-			myA1[i] = num;
-			myA1[j] = myA1[i];
-			}	
-		}
-		
-		printf(" %d", myA1[i]);
-	}
-	
-//	switch(choice){
-//		case 1:
-//			
+//	for(i=0;i<5;i++){
+//		printf("%d", &myA1[i]);
 //	}
+//	
+//	for(i=0;i<5;i++){
+//		printf("%d", &myA2[i]);
+//	}
+	
+	//choices
+	
+	printf("\nEnter your Chocie:");
+	scanf("%d", &choice);
+	
+	switch(choice){
+		//Ascending
+		case 1:
+			for(i=0;i<5;i++){
+				for(j=i;j<5;j++){
+					temp=myA1[i];
+					myA1[j]=myA1[i];
+					myA1[i]=temp;
+				}
+				printf("%d ", myA1[i]);
+			}
+			
+			for(i=0;i<5;i++){
+				for(j=i;j<5;j++){
+					temp=myA2[i];
+					myA2[i]>myA2[j];
+					myA2[i]=myA2[j];
+					myA2[j]=temp;
+				}
+				printf("%d ", myA2[i]);
+			}
+			
+			break;
+			
+		//Descending
+		case 2:
+			for(i=0;i<5;i++){
+				for(j=i;j<5;j++){
+					temp=myA1[j];
+					myA1[j]<myA1[i];
+					myA1[j]=myA1[i];
+					myA1[i]=temp;
+				}
+				printf("%d ", myA1[j]);
+			}
+			
+			break;
+			
+	}
 	
 }// Baki he...

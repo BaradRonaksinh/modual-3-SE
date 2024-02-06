@@ -56,8 +56,9 @@ int main(){
 	}else if(Choice == 3){
 		for(row=0;row<3;row++){
 			for(col=0;col<3;col++){
-				c[row][col] = a[row][col] * b[row][col];
-				printf("%d", c[row][col]);
+				//somthing missing...
+				c[row][col] = (a[row][col] * b[col][row]) + (a[row][col] * b[col+1][row]) + (a[row][col] * b[col+2][row]);
+				printf("%d ", c[row][col]);
 			}
 			printf("\n");
 		}
