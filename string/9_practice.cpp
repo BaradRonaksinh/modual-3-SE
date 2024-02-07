@@ -10,6 +10,11 @@ int main(){
 	gets(str);
 	
 	for(i=0;str[i]!='\0';i++){
-		if(str)
+		if(str[i]= space){
+			return 0;
+		}else{
+			count++;
+		}
 	}
+	printf("total charater in a string is:%d", count);
 }
