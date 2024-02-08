@@ -12,15 +12,7 @@ int main(){
 	
 	int i;
 	struct student s[5];
-//	struct student s1,s2,s3;
-//	
-//	s1.rollno=1;
-//	s1.grade='a1';
-//	s1.per=90.0;
-//	
-//	scanf("%d", &s2.rollno);
-//	scanf("%d", &s2.per);
-//	scanf("%d", &s2.grade);
+
 
 	for(i=0;i<5;i++){
 		printf("\nroll no:");
@@ -35,3 +27,14 @@ int main(){
 		printf("\n %d %f %c", s[i].rollno,s[i].per,s[i].grade);
 	}
 }
+
+
+//	struct student s1,s2,s3;
+//	
+//	s1.rollno=1;
+//	s1.grade='a1';
+//	s1.per=90.0;
+//	
+//	scanf("%d", &s2.rollno);
+//	scanf("%d", &s2.per);
+//	scanf("%d", &s2.grade);

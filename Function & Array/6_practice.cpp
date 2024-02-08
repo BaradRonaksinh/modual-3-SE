@@ -66,6 +66,4 @@ int main(){
 		printf("Enter valid input");
 	}
 	
-	
-	
-}
+}//baki to nhi he but missing...

@@ -20,9 +20,4 @@ int main(){
 		scanf(" %c",&s[i].grade);	
 	}
 	
-
-	
-	
-	
-	
 }
