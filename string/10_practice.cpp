@@ -1,21 +1,15 @@
 /*10. Write a program in C to extract a substring from a given string.*/
 
 #include<stdio.h>
-
+#include<string.h>
 int main(){
-	char str[50], subStr[10];
-	int i, length=1, choice;
+	char str[]={'my name is ronaksinh.'},subStr;
+	int length=0;
 	
-	printf("Enter the String:\n");
-	gets(str);
+	printf("string: ");
+	scanf("%s", &str);
 	
-	printf("Enter your choice:\n");
-	scanf("%d", &choice);
+	length = strlen(str);
 	
-	
-	for(i=0;i<=10;i++){
-		subStr[10]=str[i];
-		printf(" %s", str[i]);
-	}
-			
-}
+	printf("Length of string str is %s", str);
+}//baki he...
