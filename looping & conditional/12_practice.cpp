@@ -1,15 +1,33 @@
 /*12. Program of Armstrong Number in C Using For Loop & While Loop.*/
 
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
 
-int main(){
-	int a[i], i, into, sum;
-	
-	printf("Enter the number:");
-	scanf("%d", &a[i]);
-	
-	for(i = 1;i<=n;i++){
-		
-	}
+int main() {
+    int num, originalNum, remainder, n = 0, result = 0;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    originalNum = num;
+
+    while (originalNum != 0) {
+        originalNum /= 10;
+        ++n;
+    }
+
+    originalNum = num;
+
+    for (; originalNum != 0; originalNum /= 10) {
+        remainder = originalNum % 10;
+        result += pow(remainder, n);
+    }
+
+    if (result == num)
+        printf("%d is an Armstrong number.\n", num);
+    else
+        printf("%d is not an Armstrong number.\n", num);
+
+    return 0;
 }
+
