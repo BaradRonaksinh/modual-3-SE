@@ -5,30 +5,41 @@ ii. Vowel or Consonant using switch case*/
 int main(){
 	int i;
 	printf("enter alphabet to check:");
-	scanf("%d", &i);
+	scanf(" %c", &i);
 	
-	switch(i){
-		case 1:
-			i == 'a';
-			printf("a is a Vowel");
-			break;
-		case 2:
-			i == 'e';
-			printf("e is a Vowel");
-			break;
-		case 3:
-			i == 'i';
-			printf("i is a Vowel");
-			break;
-		case 4:
-			i == 'o';
-			printf("o is a Vowel");
-			break;
-		case 5:
-			i == 'u';
-			printf("u is a Vowel");
-			break;
-		default:
-			printf("%d is a Consonant", i);
-	}
-}// baki he...
+	 switch(i){
+        case 'a':
+             printf("\nvowel");
+             break;
+        case 'e':
+            printf("\nvowel");
+            break;
+        case 'i':
+            printf("\nvowel");
+            break;
+        case 'o':
+            printf("\nvowel");
+            break;
+        case 'u':
+            printf("\nvowel");
+            break;
+        case 'A':
+            printf("\nvowel");
+            break;
+        case 'E':
+            printf("\nvowel");
+            break;
+        case 'I':
+            printf("\nvowel");
+            break;
+        case 'O':
+            printf("\nvowel");
+            break;
+        case 'U':
+            printf("\nvowel");
+            break;
+        default:
+            printf("\nConsonant");
+            break;
+    }
+}

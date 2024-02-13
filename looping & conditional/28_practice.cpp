@@ -3,20 +3,26 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+  
+    int a=1,b=2,i,n;
     
-    printf("Enter the number of terms: ");
-    scanf("%d", &n);
-
-    int term = 1; // The first term in the series
-
-    for (int i = 0; i < n; i++) {
-        printf("%d ", term);
-        term *= 3; // Multiply the current term by the common ratio (3)
+    printf("enter term till you want sum:");
+    scanf("%d",&n);
+    
+    printf("%d %d ",a, b);
+    for(i=3;i<=n;i++)
+    {
+        if(i%2==1)
+        {
+            a=a*3;
+            printf("%d ",a);
+        }
+        else
+        {
+            b=b*3;
+            printf("%d ",b);
+        }
     }
-
-    printf("\n");
-
     return 0;
 }
-//baki he...
+

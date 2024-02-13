@@ -3,21 +3,18 @@
 #include<stdio.h>
 
 struct student{
-	int rollno;
-	char grade;
-	float per;
-}s[3];
+    int rollno;
+    char name[10];
+};
+
+union faculty{
+    int fno;
+    char fname[10];
+};
 
 int main(){
-	struct student s1,s2,s3;
-	int i;
-	for(i=0;i<3;i++){
-		printf("\n roll no:");
-		scanf("%d", &s[i].rollno);
-		printf("\n per:");
-		scanf("%f", &s[i].per);
-		printf("\n grade :");
-		scanf(" %c",&s[i].grade);	
-	}
-	
+    struct student s1={1,"Sneh"};
+    union faculty u1={11,"Daksh"};
+    printf("Structure:\trollno:%d\tname:%s",s1.rollno,s1.name);
+    printf("\nUnion:\trollno:%d\tname:%s",u1.fno,u1.fname);
 }

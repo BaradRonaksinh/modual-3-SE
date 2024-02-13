@@ -7,11 +7,25 @@ d. Sum of odd numbers.*/
 #include<stdio.h>
 
 int main(){
-	int i, n;
-	scanf("%d", &n);
-	
-	for(i = n; i>=n;n++){
-		printf("%d", i);
-	}
+    int a[10],i,evenNo=0,oddNo=0,sumOfeven=0,sumOfodd=0;
+    for (i=0;i<10;i++){
+        printf("\nenter a number:");
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<10;i++){
+
+           if(a[i]%2==0){
+              evenNo++;
+              sumOfeven += a[i];
+           }else{
+                  oddNo++;
+                  sumOfodd += a[i];
+           }
+    }
+
+    printf("total even numbers:%d",evenNo);
+    printf("\ntotal odd numbers:%d",oddNo);
+    printf("\nsum of even:%d",sumOfeven);
+    printf("\nsum of odd:%d",sumOfodd);
 }
 

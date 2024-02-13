@@ -3,22 +3,23 @@ string.*/
 
 #include<stdio.h>
 
+#include<stdio.h>
+#include<string.h>
 int main(){
-	int i,Vcount=0,C_count=0;
-	char str[100], vowels[5]={'a','e','i','o','u'}, consonants[21]={'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'};
-	
-	printf("String:");
-	gets(str);
-	
-	for(i=0;str[i] != '\0';i++){
-		if(str[i]==vowels[5]){
-			Vcount++;
-		} 
-		if(str[i]==consonants[21]){
-			C_count++;
-		}
-	}
-	printf("\nTotal Vowels in string is :%d",Vcount);
-	
-	printf("\nTotal Consonats in string is :%d",C_count);
+    char str[100];
+    int i,len,v=0,c=0;
+    printf("enter a string:");
+    gets(str);
+    len=strlen(str);
+    for(i=0;i<len;i++){
+        if((str[i]<=90 && str[i]>=65) || (str[i]<=122 && str[i]>=97)){
+            if(str[i]=='a' || str[i]=='A' || str[i]=='e' || str[i]=='E' || str[i]=='i' || str[i]=='I' || str[i]=='o' || str[i]=='O' ||str[i]=='u' || str[i]=='U'){
+            v++;
+            }
+            else{
+            c++;
+            }
+        }
+    }
+    printf("total vowels:%d\n total consonants:%d",v,c);
 }

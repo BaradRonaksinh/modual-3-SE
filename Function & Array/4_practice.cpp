@@ -1,25 +1,29 @@
 /* 4. WAP to find factorial using recursion.*/
 
 #include<stdio.h>
-int factorial(int n);
+
+int factorial(int num);
 int main(){
-	int i, n, sum =1;
-	
-	printf("Which Factorical do you count:");
-	scanf("%d", &n);
-	
-	return factorial(n);
+    int n,ans;
+    printf("enter a number:");
+    scanf("%d",&n);
+    ans=factorial(n);
+    printf("\nfactorial is:%d",ans);
 }
 
-int factorial(int n){
-	int i , sum=1;
-	
-	for(i=n;i>=1;i--){
-		
-		sum = sum * i;
-	}
-	
-	
-	printf("factoral num is :%d",sum);
+int factorial(int num){
+    int fact=1;
+    if(num==0){
+        return 1;
+    }
+    else if(num<0){
+        printf("enter positive number");
+        return 0;
+    }
+    else{
+        while(num!=1){
+              fact=num*factorial(num-1);
+              return fact;
+        }
+    }
 }
-

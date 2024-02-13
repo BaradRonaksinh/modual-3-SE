@@ -17,19 +17,10 @@ int main(){
 	}
 
 	if(ans != rev){
-		printf(" %d is not a Palindrom number", ans);
-	}else 	{
-		printf("%d1 is a Palindrom number", ans);
+		printf(" %d is  a Palindrom number", ans);
+	}else {
+		printf("%d is not a Palindrom number", ans);
 	}
 	
 }
-//	printf("The Reverse Number is : %d\n", n);
-//	printf("The Reverse Number is : %d\n", rev);
-	
-	
-//	if(n == ans){
-//		printf("%d is a Palindrom number", n);
-//	}else{
-//		printf("%d is not a Palindrom number",n);
-//	}
-//baki he...
+

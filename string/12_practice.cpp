@@ -5,18 +5,23 @@ the given string.*/
 #include<string.h>
 
 int main(){
-	char str[50], find[2]={'is'};
-	int i,count=0;
 	
-	printf("Enter the String \n :");
-	gets(str);
-	
-	for(i=0;str[i]!='\0';i++){
-		if(str[]=find[2]){
-			count++;
-		}
-	}
-	
-	printf("total use of 'is' :%d", count);
-	
-}//baki he...
+    char str[30];
+    int j,len,times=0;
+    
+    printf("enter a string:");
+    gets(str);
+    
+    len=strlen(str);
+    
+    for(j=0;j<=len-1;j++)
+    {
+        if ((str[j]=='i' || str[j]=='I') && (str[j+1]=='s' || str[j+1] == 'S')) {
+            if (j==len-2 || str[j+2]==' ' || str[j+2]=='\n') {
+                times++;
+            }
+        }
+    }
+    printf("Frequency of the word 'is' is %d\n",times);
+}
+

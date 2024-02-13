@@ -2,36 +2,29 @@
 characters in a string.*/
 
 #include<stdio.h>
+#include<string.h>
 
 int main(){
-	char sent[100];
-	int i, alpha=65,smallAlpha=97, digit=48, spec=91, alphabet=0, Digits=0, Special=0;
-	
-	printf("Enter your sentences:");
-	gets(sent);
-	
-	for(i=0;sent[i]!='\0';i++){
-		if((alpha >=65 && alpha<=90)||(smallAlpha>=97 && smallAlpha<=122)){
-			
-			alphabet++;
-			
-		}
-		
-		if(digit>=48 &&digit<=57){
-		
-			Digits++;
-			
-		}
-		
-		if(spec>=33 && spec<=38){
-			
-			Special++;
-		}
-	}
-	
-	printf("\nTotal alphabets is :%d", alphabet);
-	printf("\nTotal Digit is :%d", Digits);
-	printf("\nTotal Special charater is :%d", Special);
-	
-	
-}//baki he... 
+    char str[100];
+    int i,len,a=0,d=0,sc=0;
+    
+    printf("enter a string:");
+    gets(str);
+    
+    len=strlen(str);
+    for(i=0;i<len;i++){
+        if(str[i]<=90 && str[i]>=65){
+            a++;
+        }
+        else if(str[i]<=122 && str[i]>=97){
+            a++;
+        }
+        else if(str[i]<=57 && str[i]>=48){
+            d++;
+        }
+        else{
+            sc++;
+        }
+    }
+    printf("total alphabets:%d\n total digit:%d\n total special character:%d",a,d,sc);
+}
